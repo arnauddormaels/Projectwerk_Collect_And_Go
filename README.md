@@ -8,9 +8,10 @@ git clone git@github.com:arnauddormaels/Projectwerk_Collect_And_Go.git
 ## Push 
 Eerst altijd controleren op nieuwe update 
 ```console
-git status
+git pull
  ```
 ```console
 git commit
+git status
 git push
 ```
