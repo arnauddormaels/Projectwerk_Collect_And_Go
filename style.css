@@ -1,55 +1,17 @@
-/* Algemene opmaak */
+/* Algemene opmaak body */
 body {
    background-color: #fff;
    font-family: 'Montserrat', sans-serif;  
-        max-width: 1200px; /* Stel de gewenste maximale breedte in (bijvoorbeeld 1200px) */
-        margin: 0 auto; /* Centreer de body binnen de viewport */
-        padding: 0 20px; /* Voeg optionele padding toe aan de linker- en rechterzijde */
-    
-        
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 0 20px; 
 }
 
 .container {
     margin-top: 20px;
 }
 
-/* Aangepaste stijlen voor de navigatiebalk */
-.navbar {
-    background: linear-gradient(rgba(5, 135, 199, 0.05), rgba(5, 135, 199, 0.05)), #0887c7;
-    /* Gradient van 5% toegevoegd aan de achtergrondkleur */
-    color: #fff; /* Wit lettertype */
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 80px; /* Breedte van de navigatiebalk */
-    padding-top: 220px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    box-shadow: 0px 4px 14px 0px #0887c7; /* Schaduweffect toegevoegd */
-    
-}
-
-
-/* Aangepaste stijlen voor de knoppen */
-.nav-link.btn {
-    display: block; /* Maak de knoppen blokken */
-    width: 100%; /* Volledige breedte van de balk */
-    text-align: center; /* Links uitlijnen van tekst in knoppen */
-    background: none; /* Verwijder achtergrondkleur van knoppen */
-    border: none; /* Verwijder rand van knoppen */
-    padding: 0; /* Verwijder padding van knoppen */
-    color: #fff; /* Wit lettertype voor knoppen */
-    border-radius: 0; /* Geen afgeronde hoeken, knoppen zijn vierkant */
-    margin-bottom: 35px;
-    margin-top: 35px;
-}
-
-/* CSS-regels om tekstkleur wit te maken voor de knoppen */
-.navbar-nav .nav-link.btn {
-    color: white;
-}
+/* begin titel pagina */
 
 .col-lg-11 {
     margin-top: 98px;
@@ -62,158 +24,175 @@ body {
 }
 
 .col-lg-11 p {
-    border-bottom: 1px solid rgba(81, 105, 117, 0.3); /* Geef de lijn een opacity van 30% */
+    border-bottom: 1px solid rgba(81, 105, 117, 0.3); 
     padding-bottom: 5px;
 }
-.tekst
-{
-    font-weight: 300;
-    font-size: 13px;
-  
+
+/* einde titel pagina */
+
+/* Aangepaste stijlen voor de linkse navigatiebalk */
+
+.navbar {
+    background: linear-gradient(rgba(5, 135, 199, 0.05), rgba(5, 135, 199, 0.05)), #0887c7;
+    color: #fff; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 80px; 
+    padding-top: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    box-shadow: 0px 4px 14px 0px #0887c7; 
 }
 
+.nav-link.btn {
+    display: block;
+    width: 100%; 
+    text-align: center; 
+    background: none; 
+    border: none; 
+    padding: 0; 
+    color: #fff; 
+    border-radius: 0; 
+    margin-bottom: 35px;
+    margin-top: 35px;
+}
 
+.navbar-nav .nav-link.btn {
+    color: white;
+}
 
-.AddRecepten {
-    background-color: transparent; /* Maak de achtergrond doorzichtig */
-    color: #007bff; /* Blauwe tekstkleur */
+.navbar-nav.flex-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+}
+
+.nav-link.btn {
+    display: flex;
+    align-items: center; 
+    text-align: left; 
     padding: 10px 20px;
-    border: thin solid #007bff; /* Dunne, solide blauwe rand */
-
-    border-radius: 30px; /* Afgeronde hoeken */
-    cursor: pointer;
-    margin-left:380px; /* Verwijder margin-left */
-    font-size: 10px;
-    font-weight: 200;
+    margin-bottom: 10px; 
+}
+.left-sidebar {
+    width: 85px; 
+}
+.navbar-nav.flex-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    height: 100%; 
+    margin-top: -360px;
+}
+.nav-link.btn {
+    display: flex;
+    align-items: center; 
+    text-align: left;
+    padding: 10px 0; 
+    margin: 10px 0; 
+    font-size: 12px; 
+}
+.nav-link .icon-container {
+    width: 20px; 
+    height: 20px; 
+}
+.text {
+    margin-top: 10px;
+    margin-bottom: -10px;
+    font-family: 'Averta-Semibold', sans-serif;font-weight: 300;
+    font-size: 13px;
 }
 
-.Recepten {
-    margin-left: 35px; /* Verwijder margin-left */
-    color: #0887c7;
-    border-bottom: 3px solid #0887c7
-    ; /* Blauwe lijn onder de tekst */
-    padding-bottom: 5px; /* Optioneel: afstand tussen tekst en lijn */
-    display: inline-block; /* Hiermee beperk je de breedte van de lijn tot de tekst */
-    font-weight: 700;
+.icon-container {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px; 
+    width: 30px; 
+    height: 30px; 
+    transition: background-color 0.3s; 
 }
+
+/* einde navbar gedeelte */
+
+/* begin titel en knop */
 
 .shopping {
     margin-top: -20px;
 }
 
-.Gerecht1 {
+.addrecipe {
+    background-color: transparent;
+    color: #007bff; 
+    padding: 10px 20px;
+    border: thin solid #007bff; 
+
+    border-radius: 30px; 
+    cursor: pointer;
+    margin-left:380px; 
+    font-size: 10px;
+    font-weight: 200;
+}
+
+.recipe {
+    margin-left: 35px; 
+    color: #0887c7;
+    border-bottom: 3px solid #0887c7; 
+    padding-bottom: 5px; 
+    display: inline-block; 
+    font-weight: 700;
+}
+
+/* einde titel en knop */
+
+
+/* begin boven recepten gedeelte */
+
+.texttopper {
     text-align: left;
     font-size: 11px;
     font-weight: 100;
     margin-bottom: -10px;
 }
-
 .Image {
-    margin-left: 20px; /* Verwijder margin-left */
+    margin-left: 20px; 
 }
-
 .Actif {
-    margin-left: -25px; /* Verwijder margin-left */
+    margin-left: -25px; 
 }
-
 .Name {
-    margin-left: 0; /* Verwijder margin-left */
+    margin-left: 0; 
 }
-
 .URL {
-    margin-left: -20px; /* Verwijder margin-left */
+    margin-left: -20px; 
 }
-
 .Clock {
-    margin-left: 17px; /* Verwijder margin-left */
+    margin-left: 17px; 
 }
-
 .Pencil {
-    margin-left: -17px; /* Verwijder margin-left */
+    margin-left: -17px;
 }
-
 .Remove {
-    margin-left: -35px; /* Verwijder margin-left */
-}
-.icon-container {
-    display: inline-block;
-    vertical-align: middle;
-    margin-right: 5px; /* Pas dit aan om de gewenste afstand tussen het icoontje en de tekst in te stellen */
-    width: 30px; /* Pas dit aan om de gewenste grootte van het icoontje in te stellen */
-    height: 30px; /* Pas dit aan om de gewenste grootte van het icoontje in te stellen */
-    transition: background-color 0.3s; /* Voeg een overgangseffect toe voor een vloeiende kleurovergang */
-}
-/* Centrale uitlijning van knoppen in de zijbalk */
-.navbar-nav.flex-column {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Horizontaal centreren */
-    justify-content: center; /* Verticaal centreren */
+    margin-left: -35px; 
 }
 
-.nav-link.btn {
-    display: flex;
-    align-items: center; /* Horizontaal centreren van pictogram en tekst */
-    text-align: left; /* Tekst uitlijnen aan de linkerkant */
-    padding: 10px 20px;
-    margin-bottom: 10px; /* Voeg wat ruimte tussen de knoppen toe */
-}
+/* einde boven recepten gedeelte */
 
-
-/* Stijl voor de zijbalk */
-.left-sidebar {
-    width: 85px; /* Breedte van de zijbalk */
-}
-
-/* Centrale uitlijning van knoppen in de zijbalk */
-.navbar-nav.flex-column {
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Verticaal centreren */
-    height: 100%; /* Zorg ervoor dat de lijst de volledige hoogte van de zijbalk inneemt */
-    margin-top: -360px;
-}
-
-.nav-link.btn {
-    display: flex;
-    align-items: center; /* Horizontaal centreren van pictogram en tekst */
-    text-align: left; /* Tekst uitlijnen aan de linkerkant */
-    padding: 10px 0; /* Aanpassen van boven- en onderkant van de knoppen */
-    margin: 10px 0; /* Aanpassen van de marges van de knoppen */
-    font-size: 12px; /* Aanpassen van de lettergrootte van de knoppen */
-}
-
-/* Pictogram container */
-.nav-link .icon-container {
-    width: 20px; /* Aanpassen van de breedte van het pictogram */
-    height: 20px; /* Aanpassen van de hoogte van het pictogram */
-}
-.tekst {
-    margin-top: 10px;
-    margin-bottom: -10px;
-    font-family: 'Averta-Semibold', sans-serif;
-    /* Voeg eventuele andere stijlopmaak toe aan de klasse */
-}
+/* begin balk recepten */
 
 .GreyBox {
-    color: #333; /* Tekstkleur */
-    border-radius: 10px; /* Afgeronde hoeken */
-    padding: 20px; /* Ruimte binnen de grijze doos */
+    max-height: 60px; 
+    border-radius: 10px; 
+    background-color: #fff;
+    color: #333; 
+    border-radius: 10px; 
+    padding: 20px; 
     margin-right: 120px;
     margin-left: 60px;
 }
-.GreyBox {
-    max-height: 60px; /* Maximale hoogte van 30px */
-    border-radius: 10px; /* Afgeronde hoeken */
-    background-color: #fff;
-}
-
-
-.GreyBox .row {
-    display: flex;
-    align-items: center; /* Centreer de inhoud verticaal */
-}
-
 .Image1
 {
     margin-top: -50px;
@@ -224,9 +203,6 @@ body {
     margin-top: -50px;
     margin-left: 5px;
 }
-
-
-/* Stijl voor de ronde schakelaar */
 .switch {
     position: relative;
     display: inline-block;
@@ -234,24 +210,11 @@ body {
     height: 15px;
     margin-top: 10px;
 }
-
-/* Verberg standaard checkbox */
 .switch input {
     opacity: 0;
     width: 0;
     height: 0;
 }
-
-/* Stijl voor de ronde schakelaar (cirkeltje) */
-
-
-/* Stijl voor de actieve (aan) toestand van de schakelaar */
-input:checked + .slider {
-    background-color: #007bff; /* Achtergrondkleur in de aan-stand */
-}
-
-
-/* Stijl voor de ronde schakelaar (cirkeltje) */
 .slider {
     position: absolute;
     cursor: pointer;
@@ -259,69 +222,52 @@ input:checked + .slider {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #ccc; /* Achtergrondkleur in de uit-stand */
+    background-color: #ccc; 
     -webkit-transition: .4s;
     transition: .4s;
-    border-radius: 50%; /* Maak een rond cirkeltje */
+    border-radius: 50%; 
 }
-
-/* Stijl voor de actieve (aan) toestand van de schakelaar */
 input:checked + .slider {
-    background-color: #007bff; /* Achtergrondkleur in de aan-stand */
+    background-color: #007bff; 
 }
-
-/* Voeg deze CSS-regel toe aan je stylesheet */
 .container .row {
     align-items: center;
 }
-
-
-
-
-
-
 .GreyBox .row {
     display: flex;
     align-items: center;
     margin-top: -40px;
     margin-left: -35px;
 }
-
 .GreyBox .row > div {
-    margin: 0; /* Zorg ervoor dat er geen marges zijn */
-    padding: 0; /* Zorg ervoor dat er geen padding is */
+    margin: 0; 
+    padding: 0; 
 }
-.name1
+.dishname
 {
     margin-top: 17px;
     font-size: 11px;
     font-weight: 600;
     color:#516975;
-    ;
 }
 .switch{
     margin-left: -1px;
 }
-/* CSS voor het vergroten van de SVG-pictogrammen */
 .GreyBox .row .Symbol svg {
-    width: 30px; /* Pas de breedte aan naar wens */
-    height: 30px; /* Pas de hoogte aan naar wens */
+    width: 30px; 
+    height: 30px; 
     color: #0887c7;
-    
 }
 .col-lg-1.Symbol.button1 {
     margin-left: 190px;
     margin-top: 2px;
-   
 }
 .col-lg-1.Symbol.button2 {
     margin-left: 20px;
 }
-
 .col-lg-1.Symbol.button3 {
     margin-left: 19px;
 }
-
 .col-lg-3.URL1 a {
     font-size: 9px;
     color: #516975;
@@ -329,10 +275,12 @@ input:checked + .slider {
     font-weight: 600;
 }
 .Image1 img {
-    margin-left: 8px; /* Voeg hier eventuele aanpassingen toe */
+    margin-left: 8px; 
 }
-
 .GreyBox {
     box-shadow: 0px 4px 30px 0px #0000000D;
     margin-bottom: 5px;
 }
+
+/* einde balk recepten */
+
