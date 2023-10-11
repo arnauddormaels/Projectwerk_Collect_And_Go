@@ -2,11 +2,11 @@
 
 ## Azure cli installeren
 we hebben deze cli nodig voor azure devs blijkbaar  
-(windows)  
+(windows)  met bijhorende commands
 ```
 https://learn.microsoft.com/en-us/cli/azure/install-azure-cli-windows?tabs=azure-cli
 ```
-(macOs)  
+(macOs) 
 ```
 https://learn.microsoft.com/en-us/cli/azure/install-azure-cli-macos
 ```
