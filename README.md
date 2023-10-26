@@ -1,14 +1,15 @@
 # Projectwerk_Collect_And_Go
 
-## CG.React
-Hierin staat onze react code/app. Hierin moet je naar de terminal gaan en 
+## CG.React  
+In **CG.React** staat onze react code/app. in deze map moet je onderstaande code runnen in de terminal
 ```console
 yarn dev 
 ```
-runnen in de CG.React map.
-De Gebruik de URL in de code dat gereneerd wordt om de localsite te bezoeken.
-## Statische pagina 
-Code van Jens 
+De Gebruik de URL in de code dat gereneerd wordt om de localsite te bezoeken.  
+
+## Statische pagina  
+In de map statische code staat momenteel de code van Jens. Deze kan misschien nog handig zijn om bij te houden als er iets fout gaat.
+Als kleine backUp. Deze code staat ook in de React App zelf maar deze is al een beetje aangepast om runnable te zijn met react.
 
 
 
