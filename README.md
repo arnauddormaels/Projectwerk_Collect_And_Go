@@ -5,11 +5,11 @@ In **CG.React** staat onze react code/app. in deze map moet je onderstaande code
 ```console
 yarn dev 
 ```
-De Gebruik de URL in de code dat gereneerd wordt om de localsite te bezoeken.  
+De Gebruik de **URL** in de code dat gereneerd wordt om de localsite te bezoeken.  
 
 ## Statische pagina  
-In de map statische code staat momenteel de code van Jens. Deze kan misschien nog handig zijn om bij te houden als er iets fout gaat.
-Als kleine backUp. Deze code staat ook in de React App zelf maar deze is al een beetje aangepast om runnable te zijn met react.
+In de map **static page** staat momenteel de code van **Jens**. Deze kan misschien nog handig zijn om bij te houden als er iets fout gaat.
+Als kleine **backUp**. Deze code staat ook in de React App zelf maar deze is al een beetje aangepast om runnable te zijn met react.
 
 
 
