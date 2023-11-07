@@ -1,16 +1,13 @@
-//import { useState } from 'react'
-import './App.css'
-import Recipe from './components/Recipe'
-
-
-
+import React from 'react';
+import './App.css';
+import RecipePage from './Pages/RecipePage';
 
 function App() {
   return (
-    <>
-      <Recipe></Recipe>
-    </>
-  )
+    <div className="App">
+      <RecipePage />
+    </div>
+  );
 }
 
-export default App
+export default App;
