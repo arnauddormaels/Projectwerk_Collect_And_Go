@@ -1,10 +1,23 @@
 import React from 'react';
-import ReactDOM from 'react-dom'; 
-import App from './App.jsx';
+import ReactDOM from 'react-dom/client'; 
 import './index.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import TimingsPage from './Pages/TimingsPage.jsx';
+import RecipePage from './Pages/RecipePage.jsx';
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+const AppRouter = () => (
+  <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<RecipePage />} />
+      <Route path="/timings" element={<TimingsPage />} />
+      {/* Add more Route components here as needed */}
+    </Routes>
+  </BrowserRouter>
+);
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
   <React.StrictMode>
-    <App />
+    <AppRouter />
   </React.StrictMode>
 );

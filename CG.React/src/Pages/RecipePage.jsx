@@ -4,6 +4,7 @@ import SecondHeader from "../RecipeComponents/SecondHeader";
 import TableHeader from "../RecipeComponents/TableHeader";
 import RecipeList from "../RecipeComponents/RecipeList";
 import "../css/style.css";
+import NavigationBar from "../RecipeComponents/NavigationBar";
 
 const Recipe = () => {
   const [recipes, setRecipes] = useState([]);
@@ -25,6 +26,7 @@ const Recipe = () => {
 
   return (
     <div>
+      <NavigationBar />
       <Header />
       <SecondHeader />
       <TableHeader />

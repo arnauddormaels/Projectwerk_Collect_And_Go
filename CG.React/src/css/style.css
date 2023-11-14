@@ -161,16 +161,17 @@ body {
     margin-bottom: -10px;
 }
 .Image {
-    margin-left: 20px; 
+    margin-left: 22px; 
 }
 .Actif {
-    margin-left: -25px; 
+    margin-left: -29px; 
 }
 .Name {
-    margin-left: 0; 
+    margin-left: 0;
+    padding-left: 11px; 
 }
 .URL {
-    margin-left: -20px; 
+    margin-left: -18px; 
 }
 .Clock {
     margin-left: 17px; 
@@ -269,7 +270,7 @@ input:checked + .slider {
     margin-left: 20px;
 }
 .col-lg-1.Symbol.button3 {
-    margin-left: 19px;
+    margin-left: 50px;
 }
 .col-lg-3.URL1 a {
     font-size: 9px;
@@ -285,5 +286,16 @@ input:checked + .slider {
     margin-bottom: 5px;
 }
 
+.icon-button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+  }
+  
+  .icon-button:focus {
+    outline: none;
+  }
+  
 /* einde balk recepten */
 
