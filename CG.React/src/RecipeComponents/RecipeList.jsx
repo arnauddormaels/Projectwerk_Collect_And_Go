@@ -6,11 +6,11 @@ const RecipeList = () => {
 
   const fetchRecipes = async () => {
     try {
-      const response = await fetch("https://localhost:7226/api/Recipes");
+      const response = await fetch("https://localhost:7226/api/Recipe");
       const data = await response.json();
       setRecipes(data);
     } catch (error) {
-      throw new Error("Er ging iets mis met het ophalen van api/Recipes");
+      throw new Error("Er ging iets mis met het ophalen van api/Recipe");
     }
   };
 

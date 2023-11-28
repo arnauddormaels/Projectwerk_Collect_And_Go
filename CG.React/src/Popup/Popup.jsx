@@ -38,13 +38,14 @@ const PopupComponent = ({ handleClose, imgUrl, videoUrl, recipeName }) => {
       <div className="popup-container card">
         <div className="card-header d-flex justify-content-between align-items-center">
           <h3 className="card-title">Recept</h3>
+
           <div className="close-container">
             <button
               type="button"
               className="close"
               aria-label="Close"
               onClick={handleInternalClose}
-              style={{ fontSize: '24px' }}
+              style={{ fontSize: "24px" }}
             >
               <span aria-hidden="true">&times;</span>
             </button>
@@ -52,7 +53,10 @@ const PopupComponent = ({ handleClose, imgUrl, videoUrl, recipeName }) => {
         </div>
 
         <div className="card-body">
-          <form>
+          <form id="recipeForm" onSubmit={(event)=>{
+        console.log("Submit event: ", event.target.formData);               //id + submit toegevoegd, arnaud
+        event.preventDefault();                                             //Anders gaat de pagina helemaal refreshen en zo de console.log niet afbeelden, arnaud
+    }} >
             <div className="form-group">
               <div className="row">
                 <div className="col-name">
@@ -65,13 +69,13 @@ const PopupComponent = ({ handleClose, imgUrl, videoUrl, recipeName }) => {
             </div>
 
             <div className="form-group form-check">
-            <input
-  type="checkbox"
-  id="activeCheck"
-  className="form-check-input"
-  checked={isActive}
-  onChange={handleCheckboxChange}
-/>
+              <input
+                type="checkbox"
+                id="activeCheck"
+                className="form-check-input"
+                checked={isActive}
+                onChange={handleCheckboxChange}
+              />
 
               <label htmlFor="activeCheck" className="form-check-label">
                 Actief
@@ -80,7 +84,10 @@ const PopupComponent = ({ handleClose, imgUrl, videoUrl, recipeName }) => {
 
             <div>
               <div className="form-group row mb-3 align-items-center">
-                <label htmlFor="recipeName" className="col-md-3 col-form-label d-flex justify-content-between">
+                <label
+                  htmlFor="recipeName"
+                  className="col-md-3 col-form-label d-flex justify-content-between"
+                >
                   <span>Naam recept</span>
                 </label>
                 <div className="col-md-9">
@@ -111,7 +118,12 @@ const PopupComponent = ({ handleClose, imgUrl, videoUrl, recipeName }) => {
             </div>
 
             <div className="popup-actions text-center">
-              <button type="button" className="btn btn-primary" onClick={handleInternalClose}>
+              <button
+              type="submit"                                 /*Submit van gemaakt ipv button, nu luisterd de form naar deze submit button, arnaud*/
+                //type="button"
+                className="btn btn-primary"
+                onClick={handleInternalClose}
+              >
                 OPSLAAN
               </button>
             </div>
@@ -122,4 +134,15 @@ const PopupComponent = ({ handleClose, imgUrl, videoUrl, recipeName }) => {
   );
 };
 
+
+
+
 export default PopupComponent;
+//Event handler maken, arnaud/*
+/*const recipeForm = document.querySelector("#recipeForm");
+recipeForm.addEventListener("onsubmit", addRecipe);
+
+const addRecipe = (event) => {
+const recipeData = event.formData;
+console.log(recipeData);
+}*/
