@@ -1,18 +1,38 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Popup from "../Popup/Popup";
+import Popup from "../Popup/RecipePopup";
+import  Axios from "axios";
+import axios from "axios";
 
 const RecipeItem = ({ recipe, onCheckboxChange }) => {
   const navigate = useNavigate();
-  const { recipeId, name, imgUrl, videoUrl, isActive = true } = recipe;
+  const { recipeId, name, imgUrl, videoUrl, isActive = true, category } = recipe;
   const [showPopup, setShowPopup] = useState(false);
   const [selectedImgUrl, setSelectedImgUrl] = useState("");
+  const [isActiveValue , setIsActiveValue] = useState(isActive);
   
   // Functie om naar de "/timings" pagina te navigeren
   const handleTimingButtonClick = () => {
     navigate('/timings');
   };
+  const HandleIsActiveClick = () => {
+    
+    axios.put(`https://localhost:7226/api/Recipe/isActive/(${recipeId})`);             //Er is nog iets mis 
+    setIsActiveValue(!isActiveValue);
+    console.log(`Is Active value = ${isActiveValue}`);
+    
+  }
+  const handleClickRemove = () => {
+    const confirmRemove = window.confirm("Ben je zeker dat je dit wilt verwijderen?");
+    if(confirmRemove){
+      console.log("removing recipe with id " + recipeId)
+      Axios.delete(`https://localhost:7226/api/Recipe/${recipeId}`);
+      console.log("recipe removed");
 
+    }else{
+      console.log("Er is niet verwijderd.")
+    }
+  }
   const togglePopup = (imgUrl) => {
     setSelectedImgUrl(imgUrl);
     setShowPopup(!showPopup);
@@ -38,17 +58,15 @@ const RecipeItem = ({ recipe, onCheckboxChange }) => {
             <div className="col-lg-3 Name">
               <p className="dishname">{name}</p>
             </div>
-            <div className="col-lg-1 Symbol">
+            <div className="col-lg-1 Symbol ">
               <label className="switch">
                 <input
                   type="checkbox"
-                  checked={false}
-                  onChange={(e) => {
-                    const newStatus = e.target.checked;
-                    onCheckboxChange(newStatus);
+                  onChange={() => {
+                    HandleIsActiveClick();
                   }}
                 />
-                <span className="slider round"></span>
+                <span className={`slider round ${isActiveValue?"bg-primary":"bg-secondary"}`}></span>
               </label>
             </div>
             <div className="col-lg-3 URL1">
@@ -110,7 +128,7 @@ const RecipeItem = ({ recipe, onCheckboxChange }) => {
               <div className="col-lg-1 Symbol button3">
                 <button
                   className="icon-button"
-                  onClick={() => console.log("Knop 3 geklikt")}
+                  onClick= {handleClickRemove}
                 >
                   <svg
                     fill="none"
@@ -137,13 +155,14 @@ const RecipeItem = ({ recipe, onCheckboxChange }) => {
       </div>
 
       {showPopup && (
-        <Popup
-          onClose={togglePopup}
+        <Popup 
+          id = {recipeId}
           imgUrl={selectedImgUrl}
           videoUrl={videoUrl}
           recipeName={name}
           isActive={isActive}
-          onCheckboxChange={onCheckboxChange}
+          category = {category}
+          //onCheckboxChange={onCheckboxChange}           /*wordt momenteel (nog) niet gebruik, arnaud*/
         />
       )}
     </React.Fragment>

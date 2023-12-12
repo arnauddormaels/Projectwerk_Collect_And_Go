@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import Popup from "../Popup/Popup";
+import Popup from "../Popup/RecipePopup";
 
 const SecondHeader = () => {
   const [showPopup, setShowPopup] = useState(false);            {/*useState toegevoegd, arnaud*/}
@@ -20,15 +20,12 @@ const SecondHeader = () => {
       </div>
     </div>
   
-  {showPopup && (                                                                        /*popupToeveogd, arnaud*/
+  {showPopup && ( //Create new recipe button                                                                       /*popupToeveogd, arnaud*/
     <Popup
     //Hier moeten er sws nog dingen veranderen voor de handleClose()(onClose)
     //IsActive & onCheckboxChange worden volgens mij ook niet gebruikt in de props van Popup, In de button van Recipelist worden deze ook meegegeven maar ik weet waar niet deze gebruikt worden, arnaud
     /*onClose={togglePopup}*/
-    imgUrl={""}
-    videoUrl={""}
-    recipeName={""}
-    isActive={false}
+       
     /*onCheckboxChange={onCheckboxChange}*/
     />
   )}

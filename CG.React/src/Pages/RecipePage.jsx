@@ -7,7 +7,7 @@ import "../css/style.css";
 import NavigationBar from "../RecipeComponents/NavigationBar";
 
 const Recipe = () => {
-  const [recipes, setRecipes] = useState([]);
+ /* const [recipes, setRecipes] = useState([]);
 
   const fetchRecipes = async () => {
     try {
@@ -22,7 +22,8 @@ const Recipe = () => {
   useEffect(() => {
     console.log("Data wordt opgehaald");
     fetchRecipes();
-  }, []);
+  },[]);
+  */
 
   return (
     <div>
@@ -30,7 +31,7 @@ const Recipe = () => {
       <Header />
       <SecondHeader />
       <TableHeader />
-      <RecipeList recipes={recipes} /> {/* Geef de lijst met recepten door aan RecipeList */}
+      <RecipeList /> { /*recipes={recipes}*/ /* Geef de lijst met recepten door aan RecipeList */}
     </div>
   );
 };

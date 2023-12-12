@@ -6,7 +6,6 @@ import TableHeader from '../TimingComponents/TableHeader';
 import TimingList from '../TimingComponents/TimingList'; // Pas het pad aan indien nodig
 import "../css/style-timings.css";
 import RecipeName from '../TimingComponents/RecipeName';
-
 const TimingsPage = () => {
   const [timings, setTimings] = useState([]);
 
