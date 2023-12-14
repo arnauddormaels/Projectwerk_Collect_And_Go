@@ -9,7 +9,7 @@ const AppRouter = () => (
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<RecipePage />} />
-      <Route path="/timings" element={<TimingsPage />} />
+      <Route path="/timings/:id" element={<TimingsPage/>} />
       {/* Add more Route components here as needed */}
     </Routes>
   </BrowserRouter>

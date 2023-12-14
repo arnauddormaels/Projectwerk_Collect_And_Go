@@ -13,7 +13,7 @@ const RecipeItem = ({ recipe, onCheckboxChange }) => {
   
   // Functie om naar de "/timings" pagina te navigeren
   const handleTimingButtonClick = () => {
-    navigate('/timings');
+    navigate(`/timings/${recipeId}`);
   };
   const HandleIsActiveClick = () => {
     

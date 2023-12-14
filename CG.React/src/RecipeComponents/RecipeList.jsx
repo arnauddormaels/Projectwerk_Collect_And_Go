@@ -6,8 +6,12 @@ const RecipeList = () => {
 
   const fetchRecipes = async () => {
     try {
-      const response = await fetch("https://localhost:7226/api/Recipe");
+      const response = await fetch("https://localhost:7226/api/Recipe"); //returned array
+      if(!response.ok){
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
       const data = await response.json();
+      console.log(data);
       setRecipes(data);
     } catch (error) {
       throw new Error("Er ging iets mis met het ophalen van api/Recipe");

@@ -1,44 +1,42 @@
+/* eslint-disable react/prop-types */
 import React from "react";
 
 const TimingItem = ({ timing }) => {
-  const { 
-    boterImgUrl, 
-    famaImgUrl, 
-    boterName, 
-    famaName, 
-    beginTime, 
-    endTime 
-  } = timing;
 
-  return (
+const { startTime, endTime,product } = timing;
+const {name : productName, imgUrl : productImgUrl, brandProduct } = product;
+const {name : brandProductName,imgUrl : brandImgUrl}= brandProduct        //description,price, deze fields niet nodig
+ 
+
+return (
     <div className="GreyBox">
       <div className="container mt-4">
         <div className="row">
           <div className="col-lg-1 Image1">
             <img
-              src={boterImgUrl}
-              alt={boterName}
+              src={productImgUrl}
+              alt={productName}
               style={{ maxWidth: "50px", maxHeight: "50px" }}
             />
           </div>
           <div className="col-lg-1 Name">
-            <p className="dishname">{boterName}</p>
+            <p className="dishname">{productName}</p>
           </div>
           <div className="col-lg-1 Symbol arrow">
             {/* SVG icon kan hier */}
           </div>
           <div className="col-lg-1 Image2" style={{ textAlign: "center" }}>
             <img
-              src={famaImgUrl}
-              alt={famaName}
+              src={brandImgUrl}
+              alt={brandProductName}
               style={{ maxWidth: "40px", maxHeight: "50px", display: "block", margin: "0 auto", marginLeft: "42px" }}
             />
           </div>
           <div className="col-lg-1 Name">
-            <p className="Merkboost">{famaName}</p>
+            <p className="Merkboost">{brandProductName}</p>
           </div>
           <div className="col-lg-1 Name">
-            <p className="Begintime">{beginTime}</p>
+            <p className="Begintime">{startTime}</p>
           </div>
           <div className="col-lg-1 Name">
             <p className="Line">-</p>
