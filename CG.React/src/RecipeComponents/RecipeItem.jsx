@@ -1,38 +1,45 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Popup from "../Popup/RecipePopup";
-import  Axios from "axios";
+import Axios from "axios";
 import axios from "axios";
 
-const RecipeItem = ({ recipe, onCheckboxChange }) => {
+const RecipeItem = ({ recipe, setRecipeListRefresher }) => {
   const navigate = useNavigate();
-  const { recipeId, name, imgUrl, videoUrl, isActive = true, category } = recipe;
+  const {
+    recipeId,
+    name,
+    imgUrl,
+    videoUrl,
+    isActive = true,
+    category,
+  } = recipe;
   const [showPopup, setShowPopup] = useState(false);
   const [selectedImgUrl, setSelectedImgUrl] = useState("");
-  const [isActiveValue , setIsActiveValue] = useState(isActive);
-  
+  const [isActiveValue, setIsActiveValue] = useState(isActive);
+
   // Functie om naar de "/timings" pagina te navigeren
   const handleTimingButtonClick = () => {
     navigate(`/timings/${recipeId}`);
   };
   const HandleIsActiveClick = () => {
-    
-    axios.put(`https://localhost:7226/api/Recipe/isActive/(${recipeId})`);             //Er is nog iets mis 
+    axios.put(`https://localhost:7226/api/Recipe/isActive/(${recipeId})`); //Er is nog iets mis
     setIsActiveValue(!isActiveValue);
     console.log(`Is Active value = ${isActiveValue}`);
-    
-  }
-  const handleClickRemove = () => {
-    const confirmRemove = window.confirm("Ben je zeker dat je dit wilt verwijderen?");
-    if(confirmRemove){
-      console.log("removing recipe with id " + recipeId)
-      Axios.delete(`https://localhost:7226/api/Recipe/${recipeId}`);
+  };
+  const handleClickRemove = async () => {
+    const confirmRemove = window.confirm(
+      "Ben je zeker dat je dit wilt verwijderen?"
+    );
+    if (confirmRemove) {
+      console.log("removing recipe with id " + recipeId);
+      await Axios.delete(`https://localhost:7226/api/Recipe/${recipeId}`);
       console.log("recipe removed");
-
-    }else{
-      console.log("Er is niet verwijderd.")
+      setRecipeListRefresher((refresher) => !refresher);
+    } else {
+      console.log("Er is niet verwijderd.");
     }
-  }
+  };
   const togglePopup = (imgUrl) => {
     setSelectedImgUrl(imgUrl);
     setShowPopup(!showPopup);
@@ -66,7 +73,11 @@ const RecipeItem = ({ recipe, onCheckboxChange }) => {
                     HandleIsActiveClick();
                   }}
                 />
-                <span className={`slider round ${isActiveValue?"bg-primary":"bg-secondary"}`}></span>
+                <span
+                  className={`slider round ${
+                    isActiveValue ? "bg-primary" : "bg-secondary"
+                  }`}
+                ></span>
               </label>
             </div>
             <div className="col-lg-3 URL1">
@@ -90,25 +101,31 @@ const RecipeItem = ({ recipe, onCheckboxChange }) => {
             </div>
             <div className="row">
               <div className="col-lg-1 Symbol button1">
-              <button className="icon-button" onClick={handleTimingButtonClick}>
-            <svg
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.5"
-              viewBox="0 0 30 30"
-              xmlns="http://www.w3.org/2000/svg"
-              aria-hidden="true"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"
-              ></path>
-            </svg>
-          </button>
-        </div>
+                <button
+                  className="icon-button"
+                  onClick={handleTimingButtonClick}
+                >
+                  <svg
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    viewBox="0 0 30 30"
+                    xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"
+                    ></path>
+                  </svg>
+                </button>
+              </div>
               <div className="col-lg-1 Symbol button2">
-                <button className="icon-button" onClick={() => togglePopup(imgUrl)}>
+                <button
+                  className="icon-button"
+                  onClick={() => togglePopup(imgUrl)}
+                >
                   <svg
                     fill="none"
                     stroke="currentColor"
@@ -126,10 +143,7 @@ const RecipeItem = ({ recipe, onCheckboxChange }) => {
                 </button>
               </div>
               <div className="col-lg-1 Symbol button3">
-                <button
-                  className="icon-button"
-                  onClick= {handleClickRemove}
-                >
+                <button className="icon-button" onClick={handleClickRemove}>
                   <svg
                     fill="none"
                     stroke="currentColor"
@@ -155,13 +169,14 @@ const RecipeItem = ({ recipe, onCheckboxChange }) => {
       </div>
 
       {showPopup && (
-        <Popup 
-          id = {recipeId}
+        <Popup
+          id={recipeId}
           imgUrl={selectedImgUrl}
           videoUrl={videoUrl}
           recipeName={name}
           isActive={isActive}
-          category = {category}
+          category={category}
+          setRecipeListRefresher={setRecipeListRefresher}
           //onCheckboxChange={onCheckboxChange}           /*wordt momenteel (nog) niet gebruik, arnaud*/
         />
       )}

@@ -1,9 +1,8 @@
 import { useEffect, useState } from "react";
 import RecipeItem from "./RecipeItem";
-
 const RecipeList = () => {
   const [recipes, setRecipes] = useState([]);
-
+const [recipeListRefresher, setRecipeListRefresher] = useState(true);
   const fetchRecipes = async () => {
     try {
       const response = await fetch("https://localhost:7226/api/Recipe"); //returned array
@@ -21,12 +20,12 @@ const RecipeList = () => {
   useEffect(() => {
     console.log("Data wordt opgehaald");
     fetchRecipes();
-  }, []);
+  }, [recipeListRefresher]);
 
   return (
     <div>
       {recipes.map((recipe) => (
-        <RecipeItem key={recipe.recipeId} recipe={recipe} />
+        <RecipeItem key={recipe.recipeId} recipe={recipe} setRecipeListRefresher={setRecipeListRefresher} />
       ))}
     </div>
   );
