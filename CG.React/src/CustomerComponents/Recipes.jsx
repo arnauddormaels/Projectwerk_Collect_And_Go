@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import VideoPlayer from '..Videoscreen/Videoplayer'; // Importeer de VideoPlayer-component
+import VideoPlayer from '../Videoscreen/Videoplayer'; // Importeer de VideoPlayer-component
 import styles from '../css/Customer.module.css';
 
 const Recipes = () => {
