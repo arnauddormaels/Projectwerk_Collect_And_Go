@@ -4,7 +4,7 @@ import Header from '../TimingComponents/Header';
 import SecondHeader from '../TimingComponents/SecondHeader';
 import TableHeader from '../TimingComponents/TableHeader';
 import TimingList from '../TimingComponents/TimingList'; // Pas het pad aan indien nodig
-import "../css/style-timings.css";
+import "../css/style.css";
 import RecipeName from '../TimingComponents/RecipeName';
 import { useParams } from 'react-router-dom';
 const TimingsPage = () => {

@@ -1,13 +1,4 @@
-/* Popup.css */
-body {
-  background-color: #fff;
-  font-family: 'Montserrat', sans-serif;  
-   max-width: 1200px; 
-   margin: 0 auto; 
-   padding: 0 20px; 
-   font-weight: 200;
-   
-}
+
 .card-header,
 .card-title,
 .close {

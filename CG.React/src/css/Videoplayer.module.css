@@ -1,0 +1,199 @@
+
+.video-container {
+  width: 70%;
+  max-width: 200px;
+  margin-bottom: 20px; /* Space for the control bar */
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+video {
+  width: 100%;
+  border-radius: 15px;
+  display: block;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 10px;
+}
+
+.skip-buttons button {
+  cursor: pointer;
+  padding: 10px;
+  background: white;
+  border: none;
+  border-radius: 5px;
+  margin: 0 5px;
+}
+
+.volume-container {
+  display: flex;
+  align-items: center;
+}
+
+.volume-slider {
+  margin-left: 5px;
+}
+
+.product-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+.product-description {
+  flex-grow: 1;
+  padding: 0 15px;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.action-button {
+  cursor: pointer;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  background-color: #007BFF;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.videoContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.productInfoContainer {
+  display: flex;
+  flex-direction: row;
+  margin-left: 300px;
+}
+
+.productInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.productDescription {
+  margin-right: 20px; /* Voeg marges toe naar wens */
+}
+
+.actionButtons {
+  display: flex;
+  flex-direction: row;
+}
+.centeredContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  max-width: 1600px;
+  margin-left: 50px;
+}
+.centeredContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.videoContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px; /* Voeg padding toe aan de zijkanten */
+  border: 2px solid white; /* Voeg een witte rand toe */
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Voeg een schaduw toe */
+}
+
+
+.video {
+  flex: 1;
+  border-radius: 30px;
+}
+
+.content {
+  flex: 1;
+}
+/* Voeg indien nodig andere stijlen toe */
+.productDescription img {
+  max-width: 40%; /* Zorg ervoor dat de afbeelding niet breder is dan de container */
+  margin-right: 20px;
+}
+.productButtons {
+  display: flex;
+  margin-top: -40px; /* Voeg een margin toe onder de knoppen */
+}
+
+.actionButtons {
+  display: flex;
+  margin-top: 10px; /* Voeg een margin toe boven de knoppen */
+}
+
+.actionButton {
+  background-color: #0074d9; /* Achtergrondkleur van de knop */
+  color: #ffffff; /* Tekstkleur van de knop */
+  border: none; /* Verwijder de knoprand */
+  padding: 10px 20px; /* Voeg padding toe aan de knoppen */
+  cursor: pointer; /* Verander de cursor naar een pointer bij het zweven */
+  font-size: 16px; /* Grootte van de tekst in de knop */
+}
+
+.actionButton:hover {
+  background-color: #0056b3; /* Achtergrondkleur van de knop bij hover */
+}
+/* Base styles for your actionButton class */
+.actionButton {
+  padding: 10px 20px; /* Adjust size as needed */
+  border: none; /* No border for the buttons */
+  border-radius: 20px; /* Rounded corners, adjust as needed */
+  font-weight: bold; /* Bold font */
+  cursor: pointer; /* Cursor indicates clickable */
+  outline: none; /* Remove outline */
+  margin: 5px; /* Spacing between buttons */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+/* Styles for the product button */
+.productButton {
+  background-color: #3498db; /* Blue background */
+  color: white; /* White text */
+}
+
+.productButton:hover {
+  background-color: #2980b9; /* Darker blue on hover */
+}
+
+/* Styles for the ingredient button */
+.ingredientButton {
+  background-color: #e74c3c; /* Red background */
+  color: white; /* White text */
+}
+
+.ingredientButton:hover {
+  background-color: #c0392b; /* Darker red on hover */
+}
+
+/* Styles for the action buttons at the bottom */
+.addButton, .listButton {
+  background-color: #f39c12; /* Orange background */
+  color: white; /* White text */
+}
+
+.addButton:hover, .listButton:hover {
+  background-color: #e67e22; /* Darker orange on hover */
+}

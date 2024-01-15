@@ -1,0 +1,243 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: whitesmoke;
+    overflow-x: hidden;
+    margin-left: 10px;
+}
+
+
+/* navbar */
+.navbar {
+    background-color: #324D68;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    padding-right: 320px;
+    margin-left: -10px;
+  }
+  
+  
+  
+  .buttonsrow button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  
+  .navbar h1 {
+    margin-left: 200px;
+    font-size: 30px;
+    margin-top: 5px;
+  }
+  
+  .navbar div {
+    display: flex; /* Zorgt ervoor dat de knoppen naast elkaar staan */
+  }
+  
+  .navbar button {
+    margin: 0 20;
+  }
+  .buttonsrow {
+    text-align: left; /* Zet de tekst uitlijning naar links */
+  }
+  
+  .buttonsrow button {
+    margin-right: 10px; /* Voeg wat rechtermarge toe tussen de knoppen (optioneel) */
+  }
+  
+  /* navbar einde */
+
+  /* Imagegallery */
+  .imagerow {
+    display: flex; /* Zorgt ervoor dat alle elementen in een rij naast elkaar staan */
+    flex-wrap: wrap; /* Zorgt ervoor dat items naar de volgende regel gaan als er niet genoeg ruimte is */
+    justify-content: center; /* Centreert de items horizontaal */
+    gap: 10px; /* Voegt een beetje ruimte toe tussen de items */
+    margin-top: 20px;
+    margin-bottom: -10px;
+  }
+  
+  .imageContainer {
+    text-align: center;
+    width: 250px;
+    margin: 10px;
+    background-color: whitesmoke; /* Achtergrondkleur instellen op whitesmoke */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Voegt een schaduw toe */
+  }
+  
+  
+  
+  .imageContainer img {
+    width: 80%; /* Zorgt ervoor dat de afbeelding de volledige breedte van de container inneemt */
+    height: auto; /* Behoudt de oorspronkelijke verhouding van de afbeelding */
+    border-radius: 10px 10px 0 0; /* Zorgt dat de afbeelding dezelfde bovenste randradius heeft */
+  }
+  
+  .themaTitel {
+    /* Stijlen voor de titel */
+    font-size: 30px;
+    margin-left: -910px;
+    font-weight: 600;
+    margin-top: 20px;
+  }
+  
+  .imageText {
+    /* Stijlen voor de tekst onder de afbeeldingen */
+    text-align: center;
+    margin-top: 15px;
+  }
+
+  /*image einde  */
+
+.imageContainer img {
+  width: 100%;
+  height: auto;
+}
+
+
+  .themaTitel1{
+    font-size: 30px;
+    margin-left: -950px;
+    font-weight: 600;
+
+  }
+
+  /* banner */
+
+  .banner {
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .banner img {
+    width: 110%;
+    height: 500; 
+    max-height: 500px;/* Afbeelding strekt zich uit over de volledige breedte van de banner */
+    margin-left: -40px;
+    margin-top: -20px;
+    margin-bottom: -24px;
+
+  }
+  
+  .banner h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+  
+  .banner p {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  .banner button {
+    background-color: #e74c3c;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .banner button:hover {
+    background-color: #c0392b;
+  }
+  
+
+
+
+  /* banner */
+
+  .banner {
+    position: relative;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2); /* Box shadow direct onder de afbeelding toevoegen */
+
+  }
+  
+  .banner img {
+    
+    filter: brightness(45%);
+    object-fit: cover;
+  }
+  
+  .banner h1, .banner p, .banner button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+   
+  }
+  
+  .banner button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+  }
+  .titelbanner{
+    margin-top: -120px;
+    font-size: 20px;
+  }
+  .titelslogan{
+
+  margin-top: -50px;
+  }
+
+  .buttonleesmeer{
+    margin-top: 25px;
+  }
+  
+/* CSS voor standaard toestand */
+.imageContainer {
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out; /* Overgangseffecten */
+    transform-origin: center; /* Belangrijk om het element rond het midden te laten schalen */
+  }
+  
+  /* CSS voor hover-toestand */
+  .imageContainer:hover {
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); /* Nieuwe schaduwstijl voor hover */
+    transform: scale(1.05); /* Maakt de afbeelding iets groter */
+  }
+  
+  .navbar button{
+    color: whitesmoke;
+    border: none;
+    background-color: #324D68;
+    padding: 10px;
+  }
+  .navbar button:hover{
+    color: #007bff;
+    border: none;
+    text-decoration: none;
+  }
+  
+  .navbar p{
+    font-size: 25px;
+    color: whitesmoke;
+    margin-top: 10px;
+    margin-left: 300px;
+   }
+  
+  
+   .navbar p:hover{
+    color: #007bff;
+    border: none;
+    text-decoration: none;
+  }
+  .container {
+    max-width: 1200px;
+    margin: 0 auto; /* Hiermee wordt de container gecentreerd */
+  }
