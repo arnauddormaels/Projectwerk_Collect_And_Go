@@ -197,3 +197,66 @@ video {
 .addButton:hover, .listButton:hover {
   background-color: #e67e22; /* Darker orange on hover */
 }
+
+
+
+/*changes sam*/
+.centeredContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.progressBarContainer {
+  margin-top: 20px;
+  width: 800px;
+}
+
+.progressBar {
+  position: relative;
+  width: 100%; /* Adjust the width as needed */
+  height: 15px;
+  background-color: #eee;
+  margin-top: 10px;
+  border-radius: 7.5px; 
+  border: 1px solid #000;
+}
+
+.progress {
+  height: 100%;
+  width: 0; /* Set the initial width to 0 */
+  background-color: #4caf50;
+  transition: width 0.3s; /* Add a smooth transition for the progress */
+  border-radius: 7.5px; 
+}
+
+.dotContainer {
+  display: flex;
+  transform: translateY(-96%);
+}
+
+.dot {
+  width: 15px;
+  height: 15px;
+  background-color: #2196f3;
+  border-radius: 50%;
+  position: relative;
+  margin-left: 0px;
+  margin-right: -19px;
+}
+
+.tooltip {
+  display: none;
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 5px;
+  background-color: #333;
+  color: #fff;
+  border-radius: 3px;
+  z-index: 1;
+}
+
+.dot:hover .tooltip {
+  display: inline-block;
+}
